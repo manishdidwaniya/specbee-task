@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speakers</title>
+  <link  rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .custom-transition {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="flex flex-col mt-10 items-center justify-center px-4 md:px-6">
+
+  <!-- Speakers Section -->
+  <h2 class="text-2xl font-bold mb-4 text-center">View our Featured Speakers for the Event</h2>
+  <p class="text-gray-600 mb-8 text-center max-w-2xl">
+    Speakers are core contributors and industry thought leaders working at
+    <span class="text-blue-600 cursor-pointer">companies</span> that push for innovation.
+  </p>
+
+  <!-- Selected Speaker Details -->
+  <div id="activeSpeakerDetails" class="relative p-4 rounded-lg w-full max-w-4xl mb-6 shadow-lg hidden"></div>
+
+  <!-- Slider Container -->
+  <div class="relative flex items-center w-full max-w-screen-xl">
+    <!-- Left Arrow Button -->
+    <button id="prevBtn" class="absolute left-0 transform -translate-x-1/2 z-10 p-2 rounded-full bg-gray-200 hover:bg-gray-300 opacity-50 cursor-not-allowed">
+      <i class="fas fa-chevron-left text-sm"></i>
+    </button>
+
+    <!-- Cards Container -->
+    <div class="flex overflow-hidden w-full">
+      <div id="speakersContainer" class="flex custom-transition"></div>
+    </div>
+
+    <!-- Right Arrow Button -->
+    <button id="nextBtn" class="absolute right-0 transform translate-x-1/2 z-10 shadow-lg p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+      <i class="fas fa-chevron-right text-sm"></i>
+    </button>
+  </div>
+
+  <!-- See Program Button -->
+  <button class="bg-blue-600 text-white px-6 py-2 mt-8 rounded-md hover:bg-blue-700">
+    See the Program
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
